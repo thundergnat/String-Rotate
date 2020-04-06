@@ -1,0 +1,20 @@
+{
+  "authors" : [
+    "Steve Schulze (thundergnat)"
+  ],
+  "build-depends" : [ ],
+  "depends" : [ ],
+  "description" : "Rotate, but for strings rather than arrays",
+  "license" : "Artistic-2.0",
+  "name" : "String::Rotate",
+  "perl" : "6.c",
+  "provides" : {
+    "String::Rotate" : "lib/String/Rotate.pm6"
+  },
+  "resources" : [ ],
+  "source-type" : "git",
+  "source-url" : "git://github.com/thundergnat/String-Rotate.git",
+  "tags" : ["String","Strings","Text wrangling","Rotate"],
+  "test-depends" : [ ],
+  "version" : "0.0.1"
+}
