@@ -1,6 +1,8 @@
 Revision history for String-Rotate
 
 {{$NEXT}}
+
+0.0.2  2022-12-28T11:24:43-05:00
     - Remove built-in augmentation, make it optional
       Migrate to fez ecosystem
 
