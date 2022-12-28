@@ -1,5 +1,2 @@
-/resources/*.so
-/resources/*.dylib
 .precomp/
 /String-Rotate-*
-update.sh

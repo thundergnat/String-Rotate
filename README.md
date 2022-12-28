@@ -1,7 +1,7 @@
+[![Actions Status](https://github.com/thundergnat/String-Rotate/actions/workflows/test.yml/badge.svg)](https://github.com/thundergnat/String-Rotate/actions)
+
 NAME
 ====
-
-[![Build Status](https://travis-ci.org/thundergnat/String-Rotate.svg?branch=master)](https://travis-ci.org/thundergnat/String-Rotate)
 
 String::Rotate - Rotate, but for Strings directly instead of through Lists
 
@@ -11,19 +11,32 @@ SYNOPSIS
 ```perl6
 use String::Rotate;
 
+say 'Rakudo'.&rotate; # akudoR
+
+say 'Rakudo'.&rotate(-1); # oRakud
+
+say rotate 'Rakudo', 3; # udoRak
+```
+
+Also export a Role `Rotate` which may be used to augment strings
+
+```perl6
+use String::Rotate;
+use MONKEY-TYPING;
+
+augment class Str does Rotate { }
+
 say 'Rakudo'.rotate; # akudoR
 
 say 'Rakudo'.rotate(-1); # oRakud
-
-say rotate 'Rakudo', 3; # udoRak
 ```
 
 DESCRIPTION
 ===========
 
-Rotate routine and method, but for Strings instead of Lists. Seems a little redundant at first glance, you could easily do `'Rakudo'.comb.list.rotate.join` for the same effect, but the purpose built routines are, at a minimum, twice as fast and may be tens or hundreds times faster for longer strings.
+Rotate routine, but for Strings instead of Lists. Seems a little redundant at first glance, you could easily do `'Rakudo'.comb.list.rotate.join` for the same effect, but the purpose built routines are, at a minimum, twice as fast and may be tens or hundreds times faster for longer strings.
 
-These routines take a String, return a String and only perform String operations. They run in near constant time no matter how long the string is. `.comb.list.rotate.join` is heavily influenced by the size of the string.
+This routine takes a String, returns a String and only perform String operations. It runs in near constant time no matter how long the string is. `.comb.list.rotate.join` is heavily influenced by the size of the string.
 
 AUTHOR
 ======

@@ -1,6 +1,8 @@
-use v6.c;
 use Test;
 use String::Rotate;
+
+use MONKEY-TYPING;
+augment class Str does Rotate { }
 
 plan 136;
 

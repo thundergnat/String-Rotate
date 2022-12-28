@@ -1,4 +1,7 @@
 Revision history for String-Rotate
 
 {{$NEXT}}
-    - Initial version
+    - Remove built-in augmentation, make it optional
+      Migrate to fez ecosystem
+
+0.0.1 - Initial version
